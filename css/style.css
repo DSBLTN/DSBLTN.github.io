@@ -6,7 +6,7 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
-    background-color: purple;
+    background-color: black;
 }
 .bg {
     position: absolute;
@@ -16,8 +16,8 @@ body {
     height: 100vh;
     overflow: hidden;
     display: block;
-    background-color: #565364;
-    background-image: url("../img/background.png");
+    background-color: #000000;
+    background-image: url("https://finleygomez.com/img/background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -32,9 +32,62 @@ body {
     height: 100vh;
     overflow: hidden;
     display: block;
+    -webkit-animation: ZOOM 3s normal; /* Safari 4+ */
+    -moz-animation:    ZOOM 3s normal; /* Fx 5+ */
+    -o-animation:      ZOOM 3s normal; /* Opera 12+ */
+    animation:         ZOOM 3s normal; /* IE 10+, Fx 29+ */
+    z-index: -1;
+}
+.social-grid-container {
+  display: grid;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  width: 100vw;
+  z-index: 1000;
+}
+#social {
+    display: flex;
+    grid-column: 1;
+    grid-row: 1;
+    width: fit-content;
+    height: fit-content;
+    -webkit-filter: invert(1);             /* Safari 4+ */
+    -moz-filter: invert(1);                /* Fx 5+ */
+    -o-filter: invert(1);                  /* Opera 12+ */
+    filter: invert(1);                     /* IE 10+, Fx 29+ */
+    -webkit-animation: FADEIN2 3s normal; /* Safari 4+ */
+    -moz-animation:    FADEIN2 3s normal; /* Fx 5+ */
+    -o-animation:      FADEIN2 3s normal; /* Opera 12+ */
+    animation:         FADEIN2 3s normal; /* IE 10+, Fx 29+ */
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+#social a {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    display: inline-block;
+    float: right;
+}
+#social a img{
+    padding: 15px;
+    opacity: 0.5;
+    vertical-align: middle;
+}
+#social a:hover img {
+    transition: 0.2s;
+    opacity: 1;
 }
 
 #content {
+    -webkit-animation: FADEIN 3s normal; /* Safari 4+ */
+    -moz-animation:    FADEIN 3s normal; /* Fx 5+ */
+    -o-animation:      FADEIN 3s normal; /* Opera 12+ */
+    animation:         FADEIN 3s normal; /* IE 10+, Fx 29+ */
+
     height: 100vh;
     display: flex;
     flex-direction: column;
